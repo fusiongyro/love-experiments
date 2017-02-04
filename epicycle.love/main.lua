@@ -28,7 +28,7 @@ function love.draw()
    color = {255,0,0}
    for _, circle in ipairs(circles) do
       love.graphics.setColor(unpack(color))
-      if color[1] > 0 then
+      if color[1] > 0 and color[3] == 0 then
          color[1], color[2] = color[1] - 1, color[2] + 1
       elseif color[2] > 0 then
          color[2], color[3] = color[2] - 1, color[3] + 1
